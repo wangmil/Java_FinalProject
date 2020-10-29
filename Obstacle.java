@@ -13,7 +13,7 @@ public class Obstacle extends Rectangle{ //randomize this - have either spikes o
 		id=cnt++;
 		x= 900;
 		y= 425;
-		width = 500;
+		width = 400;
 		height = 50;
 		c= new Color(0,0,0);
 	}
@@ -28,14 +28,14 @@ public class Obstacle extends Rectangle{ //randomize this - have either spikes o
 		x-=30;
 	}
 	public boolean getYCollision(int x, int y, int h, int w) {
-		if(y<this.y && x +w >= this.x &&  x <= width + this.x) {
+		if(y + h <= this.y && x +w >= this.x &&  x <= width + this.x) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 	public boolean getXCollision(int x, int y, int h, int w) {
-		if(x+w>=this.x && x<this.x+width && y +h >= this.y) {
+		if(x+w>=this.x && x<this.x+width && y +h > this.y) {
 			return true;
 		} else {
 			return false;
