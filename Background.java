@@ -3,7 +3,8 @@ import javax.swing.*;
 
 
 public class Background extends Rectangle{
-	int x,y,w,h,speed = 5;
+	int x,y,w,h;
+	double speed = 5;
 	 ImageIcon background=null;
 	 public Background() {
 		 background = new ImageIcon("background.jpg");
